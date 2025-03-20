@@ -2,6 +2,7 @@
 
 const { catchAsyncErrors } = require("../middleware/catchAsyncErrors");
 const { ErrorHandler } = require("../middleware/errorMiddleware");
+const Appointment = require("../models/appointmentSchema");
 const User = require("../models/user.model");
 const {generateToken} =require("../utils/jwtToken")
 const cloudinary = require("cloudinary")
@@ -202,6 +203,7 @@ module.exports.addNewDoctor =catchAsyncErrors(async (req,res,next)=>{
         doctor
     })
 })
+
 
 
 
